@@ -1,144 +1,16 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A clean, responsive HTML starter template." />
-  <title>Modern HTML Template — Starter</title>  <!-- Favicon (replace with your own) -->  <link rel="icon" href="/favicon.ico" />  <!-- Google Fonts (optional) -->  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">  <!-- Basic CSS (reset + simple utilities) -->  <style>
-    :root{
-      --bg: #0f172a;
-      --card: #0b1220;
-      --muted: #94a3b8;
-      --accent: #7c3aed;
-      --glass: rgba(255,255,255,0.03);
-      color-scheme: light dark;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.4;background:linear-gradient(180deg,#0b1220 0%, #081028 100%);color:#e6eef8}
-    a{color:var(--accent);text-decoration:none}
-
-    /* Container */
-    .container{max-width:1100px;margin:0 auto;padding:2rem}
-
-    /* Nav */
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
-    .brand{display:flex;gap:.75rem;align-items:center;font-weight:600}
-    .brand .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:inline-grid;place-items:center;font-weight:700}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .btn{padding:.55rem .9rem;border-radius:8px;background:var(--accent);color:white;font-weight:600;border:none;cursor:pointer}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:2.5rem;align-items:center;margin-top:2rem}
-    .card{background:var(--card);padding:1.5rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
-    h1{margin:0 0 .5rem;font-size:clamp(1.6rem,2.6vw,2.4rem)}
-    p.lead{color:var(--muted);margin:0 0 1.25rem}
-
-    /* Features */
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.25rem}
-    .feature{padding:1rem;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
-
-    /* Footer */
-    footer{margin-top:3rem;padding:2rem 0;color:var(--muted);font-size:.95rem}
-
-    /* Responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr;}
-      .grid-3{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:520px){
-      .grid-3{grid-template-columns:1fr}
-      .nav-links{display:none}
-    }
-  </style></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <div class="container">
-    <!-- Nav -->
-    <header class="nav">
-      <div class="brand">
-        <div class="logo">M</div>
-        <div>
-          <div>Modern</div>
-          <div style="font-size:.8rem;color:var(--muted);">Starter Template</div>
+    <main class="container">
+        <div class="content">
+            <h1 class="title">Coming Soon</h1>
         </div>
-      </div><nav class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#docs">Docs</a>
-    <button class="btn">Get Started</button>
-  </nav>
-</header>
-
-<!-- Hero -->
-<main class="hero">
-  <section>
-    <h1>Fast, accessible, and modern HTML starter template</h1>
-    <p class="lead">A lightweight template with clean structure, responsive layout, and accessible defaults — ready to adapt for landing pages, dashboards, or prototypes.</p>
-
-    <div class="card">
-      <strong>Quick start</strong>
-      <ol style="margin:0.5rem 0 0 1.15rem;color:var(--muted)">
-        <li>Copy this file into <code>index.html</code>.</li>
-        <li>Replace text, add your assets (images, favicon).</li>
-        <li>Add your preferred CSS framework or keep this minimal style.</li>
-      </ol>
-    </div>
-
-    <div class="grid-3" id="features">
-      <div class="feature">
-        <strong>Responsive</strong>
-        <div style="color:var(--muted);margin-top:.5rem">Works on mobile, tablet, and desktop without extra effort.</div>
-      </div>
-      <div class="feature">
-        <strong>Accessible</strong>
-        <div style="color:var(--muted);margin-top:.5rem">Semantic HTML and sensible defaults for screen readers and keyboard users.</div>
-      </div>
-      <div class="feature">
-        <strong>Customizable</strong>
-        <div style="color:var(--muted);margin-top:.5rem">Drop in Tailwind, Bootstrap, or your own CSS for a different look.</div>
-      </div>
-    </div>
-  </section>
-
-  <aside>
-    <div class="card">
-      <h3 style="margin-top:0">Sign up for early access</h3>
-      <p style="color:var(--muted);margin-bottom:1rem">No spam — just updates and tips.</p>
-      <form>
-        <label for="email" style="display:block;margin-bottom:.35rem;color:var(--muted)">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required style="width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:.75rem" />
-        <button class="btn" type="submit" style="width:100%">Join</button>
-      </form>
-      <div style="margin-top:.75rem;color:var(--muted);font-size:.9rem">Or try the template locally: <code>open index.html</code></div>
-    </div>
-
-    <div class="card" style="margin-top:1rem">
-      <strong>Tips</strong>
-      <ul style="color:var(--muted);margin:0.5rem 0 0 1rem">
-        <li>Use a build tool (Vite) for larger projects.</li>
-        <li>Serve with a static host (Netlify, GitHub Pages).</li>
-      </ul>
-    </div>
-  </aside>
-</main>
-
-<footer>
-  <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
-    <div>&copy; <span id="year"></span> Modern Template — Built with ❤️</div>
-    <div style="color:var(--muted)">Made for rapid prototyping • <a href="#docs">Docs</a></div>
-  </div>
-</footer>
-
-  </div>  <script>
-    // Small JS helpers
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Example: simple form handler (replace with real endpoint)
-    document.querySelector('form')?.addEventListener('submit', function(e){
-      e.preventDefault();
-      const email = this.email?.value || '';
-      if(!email) return alert('Please enter an email');
-      alert('Thanks — we would send a confirmation to: ' + email);
-      this.reset();
-    });
-  </script></body>
+    </main>
+</body>
 </html>
