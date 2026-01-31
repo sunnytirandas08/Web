@@ -1,20 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola</title>
-    <link rel="stylesheet" href="style.css">
-</head> 
-<body>
-    <main class="container">
-        <div class="content">
-            <a href="https://www.instagram.com/sunny_tirandas?igsh=cTlmdjJzNjc3bDB6" target="_blank" rel="noopener noreferrer" class="name-link">
-                <div class="sunny">SUNNY</div>
-                <div class="tirandas">TIRANDAS</div>
-            </a>
-        </div>
-    </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brat Generator</title>
+    <meta name="description" content="Create your own brat-style text with bold typography" />
+    <style>
+      @font-face {
+        font-family: 'Monte Stella';
+        src: url('https://db.onlinewebfonts.com/t/63ce3c7522a1dc88ee78bcfd77f6638a.woff2') format('woff2'),
+             url('https://db.onlinewebfonts.com/t/63ce3c7522a1dc88ee78bcfd77f6638a.woff') format('woff');
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #08008a;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+      }
+
+      .top-text {
+        text-align: center;
+        margin-bottom: -0.35em;
+      }
+
+      .brat-input-top {
+        background: transparent;
+        border: none;
+        outline: none;
+        text-align: center;
+        width: 100%;
+        color: #ff3231;
+        font-family: 'Monte Stella', Impact, 'Arial Black', sans-serif;
+        font-size: clamp(5rem, 20vw, 16rem);
+        line-height: 1;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        font-weight: bold;
+        caret-color: currentColor;
+      }
+
+      .brat-input-top::placeholder {
+        opacity: 0.5;
+        color: #ff3231;
+      }
+
+      .bottom-bar {
+        background-color: #004daa;
+        padding: 0.05em 0.3em;
+        text-align: center;
+        display: inline-block;
+      }
+
+      .brat-input-bottom {
+        background: transparent;
+        border: none;
+        outline: none;
+        text-align: center;
+        width: auto;
+        color: #e8e6e3;
+        font-family: 'Monte Stella', Impact, 'Arial Black', sans-serif;
+        font-size: clamp(5rem, 20vw, 16rem);
+        line-height: 1;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        font-weight: bold;
+        caret-color: currentColor;
+      }
+
+      .brat-input-bottom::placeholder {
+        opacity: 0.5;
+        color: #e8e6e3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-text">
+        <input
+          type="text"
+          class="brat-input-top"
+          value="SUNNY"
+          placeholder="TOP TEXT"
+          spellcheck="false"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </div>
+      <div class="bottom-bar">
+        <input
+          type="text"
+          class="brat-input-bottom"
+          value="TIRANDAS"
+          placeholder="BOTTOM TEXT"
+          spellcheck="false"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </div>
+    </div>
+  </body>
 </html>
