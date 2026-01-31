@@ -1,86 +1,122 @@
-/* Import Sigmar One font */
-@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Reset and base styles */
-* {
+/* Brat Generator Design System */
+
+@layer base {
+  :root {
+    --background: 240 100% 27%;
+    --foreground: 36 5% 91%;
+
+    --card: 240 80% 22%;
+    --card-foreground: 220 15% 90%;
+
+    --popover: 240 80% 22%;
+    --popover-foreground: 220 15% 90%;
+
+    --primary: 0 100% 64%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 55% 38%;
+    --secondary-foreground: 220 15% 90%;
+
+    --muted: 222 55% 30%;
+    --muted-foreground: 220 15% 70%;
+
+    --accent: 222 55% 38%;
+    --accent-foreground: 220 15% 90%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 55% 30%;
+    --input: 222 55% 30%;
+    --ring: 0 100% 64%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 80% 22%;
+    --foreground: 220 15% 90%;
+
+    --card: 240 80% 22%;
+    --card-foreground: 220 15% 90%;
+
+    --popover: 240 80% 22%;
+    --popover-foreground: 220 15% 90%;
+
+    --primary: 0 100% 64%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 55% 38%;
+    --secondary-foreground: 220 15% 90%;
+
+    --muted: 222 55% 30%;
+    --muted-foreground: 220 15% 70%;
+
+    --accent: 222 55% 38%;
+    --accent-foreground: 220 15% 90%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 55% 30%;
+    --input: 222 55% 30%;
+    --ring: 0 100% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+  }
 }
 
-/* Color scheme to match the image exactly */
-:root {
-    --bg-blue: #08008A;
-    --sunny-red: #DE0000;
-    --tirandas-white: #D5D5D5;
-}
+@layer components {
+  .brat-text-top {
+    color: #ff3231;
+    font-family: Impact, 'Arial Black', Haettenschweiler, sans-serif;
+    font-size: clamp(5rem, 20vw, 16rem);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
-/* Body and layout */
-body {
-    background-color: var(--bg-blue);
-    color: var(--tirandas-white);
-    line-height: 0.88;
-    min-height: 100vh;
-    display: flex;              /* ✅ Add this */
-    justify-content: center;    /* ✅ Centers horizontally */
-    align-items: center;        /* ✅ Centers vertically */
-    font-family: "Sigmar One", sans-serif;
-}
+  .brat-text-bottom {
+    color: #e8e6e3;
+    font-family: Impact, 'Arial Black', Haettenschweiler, sans-serif;
+    font-size: clamp(5rem, 20vw, 16rem);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
-/* Main container */
-.container {
+  .brat-bar {
+    background-color: #004daa;
+    padding: 0.05em 0;
+  }
+
+  .brat-input {
+    background: transparent;
+    border: none;
+    outline: none;
     text-align: center;
-    padding: 2rem;
-}
-
-/* Content wrapper */
-.content {
-    max-width: 800px;
     width: 100%;
-}
+    font-family: Impact, 'Arial Black', Haettenschweiler, sans-serif;
+    caret-color: currentColor;
+  }
 
-/* Name link wrapper */
-.name-link {
-    text-decoration: none;
-    display: block;
-}
-
-/* SUNNY styling */
-.sunny {
-    font-size: clamp(5rem, 15vw, 10rem);
-    font-weight: 900;
-    color: var(--sunny-red);
-    letter-spacing: -0.01em;
-    margin-bottom: -0.15em;
-    text-transform: uppercase;
-    transform: scaleX(1.02);
-    -webkit-text-stroke: 2px var(--sunny-red);
-    text-stroke: 2px var(--sunny-red);
-}
-
-/* TIRANDAS styling */
-.tirandas {
-    font-size: clamp(5rem, 15vw, 10rem);
-    font-weight: 900;
-    color: var(--tirandas-white);
-    letter-spacing: -0.005em;
-    text-transform: uppercase;
-    background-color: #014EAA;
-    padding: 0.1em 0.2em;
-    display: inline-block;
-    -webkit-text-stroke: 2px var(--tirandas-white);
-    text-stroke: 2px var(--tirandas-white);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .sunny, .tirandas {
-        font-size: clamp(3rem, 15vw, 6rem);
-    }
-}
-
-@media (max-width: 480px) {
-    .sunny, .tirandas {
-        font-size: clamp(2.5rem, 18vw, 5rem);
-    }
+  .brat-input::placeholder {
+    opacity: 0.5;
+  }
 }
